@@ -5,9 +5,7 @@ let num2 = parseInt(prompt(`Introduzca el segundo número`));
 let num3 = parseInt(prompt(`Introduzca el tercer número`));
 let num4 = parseInt(prompt(`Introduzca el cuarto número`));
 
-console.log(isNaN(num1) && isNaN(num2) && isNaN(num3) && isNaN(num4))
-
-if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) == true) {
+if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
     document.write(`Porfavor, ingrese números validos.`)
 } else {
     let suma = num1 + num2 + num3 + num4;
