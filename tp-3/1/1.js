@@ -8,5 +8,7 @@ document.write(`<h1>Lista de meses:</h1><ul>`);
 
 for (let i = 0; i <= 11; i++) {
     mes = meses.at(i);
-    document.write(`<li> ${mes} </li>`);
+    document.write(`<li> <p> ${mes} <p> </li>`);
 };
+
+document.write(`</ul>`);
