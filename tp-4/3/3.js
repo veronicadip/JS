@@ -14,11 +14,11 @@ class Rectangulo {
         return this.alto * this.ancho;
     };
     mostrarProp() {
-        document.write(`Las propiedades del rectángulo son las siguientes: <br> <ul><li>Alto: ${this.alto}</li><li>Ancho: ${this.ancho}</li>
-        <li>Perímetro: ${this.calcPerimetro()}</li><li>Área: ${this.calcArea()}</li></ul><br>`);
+        return (document.write(`Las propiedades del rectángulo son las siguientes: <br> <ul><li>Alto: ${this.alto}</li><li>Ancho: ${this.ancho}</li>
+        <li>Perímetro: ${this.calcPerimetro()}</li><li>Área: ${this.calcArea()}</li></ul><br>`));
     };
 }
 
-let rectangulo1 = new Rectangulo(10, 25);
+let rectangulo1 = new Rectangulo(14, 35);
 
-document.write(rectangulo1.mostrarProp());
+rectangulo1.mostrarProp();
