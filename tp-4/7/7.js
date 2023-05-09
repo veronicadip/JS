@@ -79,7 +79,7 @@ const agendaLlena = function () {
 };
 
 const huecosLibres = function () {
-    agenda.length <= 9 ? document.write(`La agenda tiene ${10 - agenda.length} espacios libres.<br>`) : document.write(`La agenda no tiene más espacios disponibles.<br>`)
+    agenda.length <= 9 ? document.write(`La agenda tiene ${10 - agenda.length} espacios libres.<br>`) : document.write(`La agenda no tiene más espacios disponibles.<br>`);
 };
 
 let accion = prompt(`Menú de acciones. Apretar cancelar para leer instrucciones de uso.`).toLowerCase();
@@ -113,5 +113,5 @@ while (accion !== null) {
         accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
     } else {
         accion = prompt(`Comando incorrecto. Si desea dejar de ejecutar acciones, apriete cancelar.`).toLowerCase();
-    }
-}
+    };
+};
