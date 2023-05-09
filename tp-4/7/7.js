@@ -56,7 +56,7 @@ const buscarContacto = function (nombre) {
         if (agenda.at(i).nombre === nombre) {
             document.write(`${nombre}: ${agenda.at(i).telefono}<br>`);
             estaElContacto = true;
-        }
+        };
     };
     if (estaElContacto === false) {
         document.write(`El contacto ${nombre} no existe.<br>`)
@@ -82,12 +82,36 @@ const huecosLibres = function () {
     agenda.length <= 9 ? document.write(`La agenda tiene ${10 - agenda.length} espacios libres.<br>`) : document.write(`La agenda no tiene más espacios disponibles.<br>`)
 };
 
-aniadirContacto("Jane Doe", 111111);
-aniadirContacto("John Doe", 222222);
-aniadirContacto("Vero Dip", 333333);
-existeContacto("Jane Doe");
-listarContactos();
-buscarContacto("John Doe");
-eliminarContacto("John Doe");
-agendaLlena();
-huecosLibres();
+let accion = prompt(`Menú de acciones. Apretar cancelar para leer instrucciones de uso.`).toLowerCase();
+
+while (accion !== null) {
+    if (accion === "añadir") {
+        let nombre = prompt(`Ingrese el nombre del nuevo contacto.`);
+        let telefono = prompt(`Ingrese su número telefónico.`);
+        aniadirContacto(nombre, telefono);
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "existe") {
+        let nombre = prompt(`Ingrese el nombre que desea buscar.`);
+        existeContacto(nombre);
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "listar") {
+        listarContactos();
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "buscar") {
+        let nombre = prompt(`Ingrese el nombre del contacto que desea buscar.`);
+        buscarContacto(nombre);
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "eliminar") {
+        let nombre = prompt(`Ingresá el nombre del contacto que deseas eliminar.`);
+        eliminarContacto(nombre);
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "llena") {
+        agendaLlena();
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else if (accion === "libre") {
+        huecosLibres();
+        accion = prompt(`Si desea ejecutar otra acción, escribala. Sino apriete cancelar.`).toLowerCase();
+    } else {
+        accion = prompt(`Comando incorrecto. Si desea dejar de ejecutar acciones, apriete cancelar.`).toLowerCase();
+    }
+}
