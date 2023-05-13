@@ -11,10 +11,3 @@ const crearNumero = function () {
     let max = Math.floor(11);
     numero = Math.floor(Math.random() * (max - min) + min);
 };
-
-window.onload = function () {
-    const botonJugar = document.getElementById(`botonJugar`);
-    botonJugar.addEventListener(`click`, () => crearNumero());
-    console.log(numero)
-}
-
