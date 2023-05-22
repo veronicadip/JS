@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const agregarTarea = document.querySelector(".agregarTarea");
   agregarTarea.addEventListener("click", (e) => {
     e.preventDefault();
-    lista.push(e.target.form[0].value);
     agregarLi(e.target.form[0].value);
   });
 });
