@@ -13,10 +13,76 @@
     <title>Ejercicio 2</title>
   </head>
   <body>
+    <!-- FORM -->
     <form>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <!-- NOMBRE -->
+      <input
+        type="text"
+        class="form-control nombre"
+        placeholder="Nombre"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+      <!-- EDAD -->
+      <input
+        type="number"
+        class="form-control edad"
+        placeholder="Edad"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+      <!-- DNI -->
+      <input
+        type="number"
+        class="form-control dni"
+        placeholder="DNI"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+      <!-- SEXO -->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="sexo"
+          id="f"
+          checked
+        />
+        <label class="form-check-label" for="f"> Mujer </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="sexo" id="m" />
+        <label class="form-check-label" for="m"> Hombre </label>
+      </div>
+      <!-- PESO -->
+      <input
+        type="number"
+        class="form-control peso"
+        placeholder="Peso"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+      <!-- ALTURA -->
+      <input
+        type="number"
+        class="form-control altura"
+        placeholder="Altura"
+        aria-label="Username"
+        aria-describedby="basic-addon1"
+      />
+      <!-- NACIMIENTO -->
+      <input type="date" name="nacimiento" id="nacimiento" />
+      <!-- SUBMIT -->
+      <button type="submit" class="btn btn-primary enviar">Submit</button>
     </form>
-
+    <!-- BOTON GENERACION -->
+    <button type="button" class="btn btn-primary m-5 botonGeneracion">
+      Mostrar generación
+    </button>
+    <!-- BOTON MAYOR DE EDAD -->
+    <button type="button" class="btn btn-primary m-5 botonEdad">
+      Es mayor de edad?
+    </button>
     <!-- SCRIPTS -->
     <script src="./2.js"></script>
     <script
